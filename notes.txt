@@ -1,0 +1,12 @@
+EF Migration =>
+To install EF Migration tool for .Net core 3:
+dotnet tool install -g dotnet-ef --version 3.0.0-*
+
+Required Nuget package in startup project:
+Microsoft.EntityFrameworkCore.Design
+
+To add migration:
+dotnet ef migrations add InitialCreate -p Persistence -s API
+
+Update DB =>
+dotnet ef database update
